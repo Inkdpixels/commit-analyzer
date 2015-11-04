@@ -19,6 +19,7 @@
     "xo": "^0.10.1"
   },
   "dependencies": {
+    "babel": "^5.8.29"
   },
   "xo": {
     "esnext": true,
