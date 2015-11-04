@@ -20,8 +20,8 @@ Specify the custom commit-analyzer plugin in your projects `package.json`.
 ```
 
 ## Commit message guidelines
-Every commit message should have a prefix, which is surrounded by square bracket.
-Following up is a list of available prefixes and what kind of release they will trigger.
+Every commit message should have a prefix, which is surrounded by square brackets.
+Below is a list of available prefixes and what kind of release they will trigger once they are in your preferred git release branch.
 
 | Prefix        | Description     | Release type  |
 | ------------- | --------------- | ------------- |
