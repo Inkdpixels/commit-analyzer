@@ -1,0 +1,31 @@
+{
+  "name": "@inkdpixels/commit-analyzer",
+  "version": "0.0.1",
+  "description": "A commit-analyzer plugin for semantic-release which uses the commit guidelines of TYPO3 CMS.",
+  "main": "dist/index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "babel src --out-dir dist",
+    "lint": "xo src/**/*.js",
+    "mocha": "find ./src -name '*.spec.js' | xargs istanbul cover -x *.spec.js _mocha -- -R spec --compilers js:babel/register",
+    "test": "npm run lint && npm run mocha && npm run build && node dist/index.js"
+  },
+  "author": "Tyll Weiß <inkdpixels@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "istanbul": "^0.4.0",
+    "mocha": "^2.3.3",
+    "xo": "^0.10.1"
+  },
+  "dependencies": {
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "mocha",
+      "es6"
+    ]
+  }
+}
