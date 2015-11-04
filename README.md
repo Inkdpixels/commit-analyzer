@@ -15,7 +15,7 @@ Specify the custom commit-analyzer plugin in your projects `package.json`.
 {
   "release": {
     "analyzeCommits": "@inkdpixels/commit-analyzer"
-	}
+  }
 }
 ```
 
