@@ -19,6 +19,17 @@ Specify the custom commit-analyzer plugin in your projects `package.json`.
 }
 ```
 
+## Commit message guidelines
+Every commit message should have a prefix, which is surrounded by square bracket.
+Following up is a list of available prefixes and what kind of release they will trigger.
+
+| Prefix        | Description     | Release type  |
+| ------------- | --------------- | ------------- |
+| `[!!!]`       | Breaking change | Major         |
+| `[FEATURE]`   | Feature         | Minor         |
+| `[BUGFIX]`    | Bugfix          | Patch         |
+| `[TASK]`      | Other changes   | No release    |
+
 ## Contributing
 We use xo to lint the code, please take care to run `npm test` before you commit something.
 If you add or modify methods or the API, please add unit tests as specified in the `*.spec.js` files.
