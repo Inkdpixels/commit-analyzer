@@ -30,6 +30,8 @@ Below is a list of available prefixes and what kind of release they will trigger
 | `[BUGFIX]`    | Bugfix          | Patch         |
 | `[TASK]`      | Other changes   | No release    |
 
+You may also want to use the [generateNotes plugin](https://github.com/Inkdpixels/release-notes-generator) for this commit style & analyzer.
+
 ## Contributing
 We use xo to lint the code, please take care to run `npm test` before you commit something.
 If you add or modify methods or the API, please add unit tests as specified in the `*.spec.js` files.
