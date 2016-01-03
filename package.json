@@ -1,6 +1,6 @@
 {
   "name": "@inkdpixels/commit-analyzer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A commit-analyzer plugin for semantic-release which uses the commit guidelines of TYPO3 CMS.",
   "main": "dist/index.js",
   "scripts": {
