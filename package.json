@@ -4,22 +4,22 @@
   "description": "A commit-analyzer plugin for semantic-release which uses the commit guidelines of TYPO3 CMS.",
   "main": "dist/index.js",
   "scripts": {
-    "postinstall": "npm run build",
-    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build",
+    "build": "babel src -d dist",
     "lint": "xo src/**/*.js",
-    "mocha": "find ./src -name '*.spec.js' | xargs istanbul cover -x *.spec.js _mocha -- -R spec --compilers js:babel/register",
+    "mocha": "find ./src -name '*.spec.js' | xargs istanbul cover -x *.spec.js _mocha -- -R spec --compilers js:babel-register",
     "test": "npm run lint && npm run mocha && npm run build && node dist/index.js"
   },
   "author": "Tyll Weiß <inkdpixels@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^3.4.0",
-    "istanbul": "^0.4.0",
-    "mocha": "^2.3.3",
-    "xo": "^0.10.1"
-  },
-  "dependencies": {
-    "babel": "^5.8.29"
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "xo": "^0.12.1"
   },
   "xo": {
     "esnext": true,

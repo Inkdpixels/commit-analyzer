@@ -1,5 +1,5 @@
 import contains from './contains.js';
 
-export default {
+export {
 	contains
 };

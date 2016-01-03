@@ -1,3 +1,1 @@
-export default (string, spec) => {
-	return string.indexOf(spec) >= 0;
-};
+export default (string, spec) => string.indexOf(spec) >= 0;

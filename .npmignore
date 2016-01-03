@@ -1,0 +1,5 @@
+coverage
+.babelrc
+.codeclimate.yml
+.gitignore
+.travis.yml
