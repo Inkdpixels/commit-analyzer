@@ -28,6 +28,7 @@ Below is a list of available prefixes and what kind of release they will trigger
 | `!!!`         | Breaking change | Major         |
 | `FEATURE`     | Feature         | Minor         |
 | `BUGFIX`      | Bugfix          | Patch         |
+| `SECURITY`    | Security change | Patch         |
 | `TASK`        | Other changes   | No release    |
 
 More infos regarding the commit message guidelines can be found in the official [discuss forum](https://discuss.neos.io/t/commit-message-style/507). You may also want to use the [generateNotes plugin](https://github.com/Inkdpixels/release-notes-generator) for this commit style & analyzer.

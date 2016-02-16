@@ -16,7 +16,7 @@ export default (pluginConfig, {commits}, cb) => {
 			releaseType = 'minor';
 		}
 
-		if (!releaseType && beginsWith(message, 'BUGFIX')) {
+		if (!releaseType && (beginsWith(message, 'BUGFIX') || beginsWith(message, 'SECURITY'))) {
 			releaseType = 'patch';
 		}
 

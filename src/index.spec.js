@@ -67,4 +67,20 @@ describe('The "commit-analyzer"', () => {
 			done();
 		});
 	});
+
+	it('should return release "patch" if security tags are specified in commit messages.', done => {
+		analyzer({}, {
+			commits: [{
+				hash: 'asdf',
+				message: 'SECURITY: build script'
+			}, {
+				hash: 'dsf34324',
+				message: 'TEST: build script'
+			}]
+		}, (err, type) => {
+			expect(type).to.equal('patch');
+
+			done();
+		});
+	});
 });
