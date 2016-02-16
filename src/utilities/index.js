@@ -1,5 +1,5 @@
-import contains from './contains.js';
+import beginsWith from './beginsWith.js';
 
 export {
-	contains
+	beginsWith
 };

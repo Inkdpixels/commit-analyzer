@@ -1,4 +1,4 @@
-import {contains} from './utilities/';
+import {beginsWith} from './utilities/';
 
 export default (pluginConfig, {commits}, cb) => {
 	let releaseType = null;
@@ -6,17 +6,17 @@ export default (pluginConfig, {commits}, cb) => {
 	commits.every(commit => {
 		const {message} = commit;
 
-		if (contains(message, '[!!!]')) {
+		if (beginsWith(message, '!!!')) {
 			releaseType = 'major';
 
 			return false;
 		}
 
-		if (contains(message, '[FEATURE]')) {
+		if (beginsWith(message, 'FEATURE')) {
 			releaseType = 'minor';
 		}
 
-		if (!releaseType && contains(message, '[BUGFIX]')) {
+		if (!releaseType && beginsWith(message, 'BUGFIX')) {
 			releaseType = 'patch';
 		}
 

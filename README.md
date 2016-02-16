@@ -25,12 +25,12 @@ Below is a list of available prefixes and what kind of release they will trigger
 
 | Prefix        | Description     | Release type  |
 | ------------- | --------------- | ------------- |
-| `[!!!]`       | Breaking change | Major         |
-| `[FEATURE]`   | Feature         | Minor         |
-| `[BUGFIX]`    | Bugfix          | Patch         |
-| `[TASK]`      | Other changes   | No release    |
+| `!!!`         | Breaking change | Major         |
+| `FEATURE`     | Feature         | Minor         |
+| `BUGFIX`      | Bugfix          | Patch         |
+| `TASK`        | Other changes   | No release    |
 
-You may also want to use the [generateNotes plugin](https://github.com/Inkdpixels/release-notes-generator) for this commit style & analyzer.
+More infos regarding the commit message guidelines can be found in the official [discuss forum](https://discuss.neos.io/t/commit-message-style/507). You may also want to use the [generateNotes plugin](https://github.com/Inkdpixels/release-notes-generator) for this commit style & analyzer.
 
 ## Contributing
 We use xo to lint the code, please take care to run `npm test` before you commit something.

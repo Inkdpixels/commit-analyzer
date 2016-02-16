@@ -11,7 +11,7 @@ describe('The "commit-analyzer"', () => {
 				message: 'chore: build script'
 			}, {
 				hash: 'dsf34324',
-				message: '[TEST] build script'
+				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
 			expect(type).to.equal(null);
@@ -24,10 +24,10 @@ describe('The "commit-analyzer"', () => {
 		analyzer({}, {
 			commits: [{
 				hash: 'asdf',
-				message: '[!!!][BUGFIX] build script'
+				message: '!!! BUGFIX: build script'
 			}, {
 				hash: 'dsf34324',
-				message: '[TEST] build script'
+				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
 			expect(type).to.equal('major');
@@ -40,10 +40,10 @@ describe('The "commit-analyzer"', () => {
 		analyzer({}, {
 			commits: [{
 				hash: 'asdf',
-				message: '[FEATURE] build script'
+				message: 'FEATURE: build script'
 			}, {
 				hash: 'dsf34324',
-				message: '[TEST] build script'
+				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
 			expect(type).to.equal('minor');
@@ -56,10 +56,10 @@ describe('The "commit-analyzer"', () => {
 		analyzer({}, {
 			commits: [{
 				hash: 'asdf',
-				message: '[BUGFIX] build script'
+				message: 'BUGFIX: build script'
 			}, {
 				hash: 'dsf34324',
-				message: '[TEST] build script'
+				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
 			expect(type).to.equal('patch');
