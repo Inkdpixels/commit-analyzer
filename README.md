@@ -1,4 +1,6 @@
 # @inkdpixels/commit-analyzer
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Inkdpixels/commit-analyzer.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Inkdpixels/commit-analyzer.svg)](https://travis-ci.org/Inkdpixels/commit-analyzer) [![Dependency Status](https://david-dm.org/Inkdpixels/commit-analyzer.svg)](https://david-dm.org/inkdpixels/commit-analyzer) [![devDependency Status](https://david-dm.org/Inkdpixels/commit-analyzer/dev-status.svg)](https://david-dm.org/inkdpixels/commit-analyzer#info=devDependencies) [![Code Climate](https://codeclimate.com/github/Inkdpixels/commit-analyzer/badges/gpa.svg)](https://codeclimate.com/github/Inkdpixels/commit-analyzer) [![Test Coverage](https://codeclimate.com/github/Inkdpixels/commit-analyzer/badges/coverage.svg)](https://codeclimate.com/github/Inkdpixels/commit-analyzer/coverage)
 
 > A commit-analyzer plugin for semantic-release which uses the commit guidelines of [Neos](https://www.neos.io/).
