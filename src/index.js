@@ -1,6 +1,6 @@
-import {beginsWith} from './utilities/';
+const {beginsWith} = require('./utilities/');
 
-export default (pluginConfig, {commits}, cb) => {
+module.exports = (pluginConfig, {commits}, cb) => {
 	let releaseType = null;
 
 	commits.every(commit => {
@@ -14,10 +14,14 @@ export default (pluginConfig, {commits}, cb) => {
 
 		if (beginsWith(message, 'FEATURE')) {
 			releaseType = 'minor';
+
+			return false;
 		}
 
-		if (!releaseType && (beginsWith(message, 'BUGFIX') || beginsWith(message, 'SECURITY'))) {
+		if (beginsWith(message, 'BUGFIX') || beginsWith(message, 'SECURITY')) {
 			releaseType = 'patch';
+
+			return false;
 		}
 
 		return true;

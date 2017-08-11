@@ -1,1 +1,1 @@
-export default (string, spec) => string.indexOf(spec) === 0;
+module.exports = (string, spec) => string.indexOf(spec) === 0;

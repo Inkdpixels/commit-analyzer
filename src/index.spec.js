@@ -1,9 +1,6 @@
-import chai from 'chai';
-import analyzer from './index.js';
+const analyzer = require('./index.js');
 
-const {expect} = chai;
-
-describe('The "commit-analyzer"', () => {
+describe('analyzer()', () => {
 	it('should return no release type if none commits have the conventional type tags.', done => {
 		analyzer({}, {
 			commits: [{
@@ -14,7 +11,7 @@ describe('The "commit-analyzer"', () => {
 				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
-			expect(type).to.equal(null);
+			expect(type).toBe(null);
 
 			done();
 		});
@@ -30,7 +27,7 @@ describe('The "commit-analyzer"', () => {
 				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
-			expect(type).to.equal('major');
+			expect(type).toBe('major');
 
 			done();
 		});
@@ -46,7 +43,7 @@ describe('The "commit-analyzer"', () => {
 				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
-			expect(type).to.equal('minor');
+			expect(type).toBe('minor');
 
 			done();
 		});
@@ -62,7 +59,7 @@ describe('The "commit-analyzer"', () => {
 				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
-			expect(type).to.equal('patch');
+			expect(type).toBe('patch');
 
 			done();
 		});
@@ -78,7 +75,7 @@ describe('The "commit-analyzer"', () => {
 				message: 'TEST: build script'
 			}]
 		}, (err, type) => {
-			expect(type).to.equal('patch');
+			expect(type).toBe('patch');
 
 			done();
 		});

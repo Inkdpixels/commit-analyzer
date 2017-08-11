@@ -1,5 +1,5 @@
-import beginsWith from './beginsWith.js';
+const beginsWith = require('./beginsWith.js');
 
-export {
+module.exports = {
 	beginsWith
 };
